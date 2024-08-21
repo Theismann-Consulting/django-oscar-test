@@ -60,3 +60,4 @@ settings_local.py
 
 # test stuff
 /tests/whoosh_index/
+.env
