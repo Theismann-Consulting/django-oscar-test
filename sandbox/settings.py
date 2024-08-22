@@ -16,7 +16,7 @@ EMAIL_SUBJECT_PREFIX = '[Oscar sandbox] '
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Use a Sqlite database by default
-OPTIONS = {'sslmode': 'require'} if os.environ.get('DATABASE_ENGINE') == 'django.db.backends.sqlite3' else {}
+OPTIONS = {'sslmode': 'disable'} if os.environ.get('DATABASE_ENGINE') == 'django.db.backends.sqlite3' else {}
 DATABASES = {
     'default': {
         'ENGINE': os.environ.get('DATABASE_ENGINE', 'django.db.backends.sqlite3'),
