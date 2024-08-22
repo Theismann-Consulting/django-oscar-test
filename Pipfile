@@ -23,6 +23,8 @@ ipdb = "<0.14,>=0.13"
 ipython = "<9,>=7.12"
 pycountry = "*"
 django-oscar = "*"
+sorl-thumbnail = "*"
+easy-thumbnails = "*"
 
 [dev-packages]
 

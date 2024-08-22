@@ -18,7 +18,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Use a Sqlite database by default
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('DATABASE_ENGINE', 'django.db.backends.postgresql'),
+        'ENGINE': os.environ.get('DATABASE_ENGINE', 'django.db.backends.sqlite3'),
         'NAME': os.environ.get('DATABASE_NAME', location('db.sqlite')),
         'USER': os.environ.get('DATABASE_USER', None),
         'PASSWORD': os.environ.get('DATABASE_PASSWORD', None),
