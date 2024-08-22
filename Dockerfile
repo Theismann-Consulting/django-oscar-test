@@ -21,5 +21,7 @@ RUN make build_sandbox
 
 RUN cp --remove-destination /app/src/oscar/static/oscar/img/image_not_found.jpg /app/sandbox/public/media/
 
+ENV PGSSLCERT /tmp/postgresql.crt
+
 WORKDIR /app/sandbox/
 CMD uwsgi --ini uwsgi.ini
