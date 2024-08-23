@@ -1,6 +1,7 @@
 import os
 import environ
 import oscar
+import sys
 
 env = environ.Env()
 
@@ -195,7 +196,8 @@ LOGGING = {
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'simple'
+            'formatter': 'default',
+            "stream": sys.stdout
         },
     },
     'loggers': {
@@ -222,15 +224,15 @@ LOGGING = {
         },
         'django.request': {
             'handlers': ['console'],
-            'level': 'ERROR',
+            'level': 'INFO',
             'propagate': True,
         },
         'django.db.backends': {
-            'level': 'WARNING',
+            'level': 'INFO',
             'propagate': True,
         },
         'django.security.DisallowedHost': {
-            'handlers': ['null'],
+            'handlers': ['console'],
             'propagate': False,
         },
 
