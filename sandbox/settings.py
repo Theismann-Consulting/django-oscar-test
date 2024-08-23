@@ -196,7 +196,7 @@ LOGGING = {
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'simple',
+            'formatter': 'verbose',
             "stream": sys.stdout
         },
     },
@@ -207,12 +207,12 @@ LOGGING = {
         },
         'oscar.catalogue.import': {
             'handlers': ['console'],
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagate': False,
         },
         'oscar.alerts': {
             'handlers': ['null'],
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagate': False,
         },
 
@@ -220,15 +220,15 @@ LOGGING = {
         'django': {
             'handlers': ['null'],
             'propagate': True,
-            'level': 'INFO',
+            'level': 'DEBUG',
         },
         'django.request': {
             'handlers': ['console'],
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagate': True,
         },
         'django.db.backends': {
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagate': True,
         },
         'django.security.DisallowedHost': {
