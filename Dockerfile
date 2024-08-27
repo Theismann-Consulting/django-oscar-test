@@ -23,5 +23,7 @@ RUN cp --remove-destination /app/src/oscar/static/oscar/img/image_not_found.jpg 
 
 ENV PGSSLCERT /tmp/postgresql.crt
 
+EXPOSE 8080
+
 WORKDIR /app/sandbox/
 CMD uwsgi --ini uwsgi.ini
